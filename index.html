@@ -4,12 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donut — AI Trading · AI Courses · Vehicles</title>
-  <meta name="description" content="Donut: automated AI trading built in-house, practical AI courses for local businesses, and vintage electric vehicles coming soon." />
-  <meta property="og:title" content="Donut — AI Trading · AI Courses · Vehicles" />
-  <meta property="og:description" content="Automated AI trading, practical AI courses for local business, and vintage electric vehicles — coming soon." />
+  <meta name="description" content="Donut is three ventures: automated AI trading, AI courses for local business, and vintage electric vehicles." />
+  <meta property="og:title" content="Donut" />
+  <meta property="og:description" content="AI trading, AI courses, and vintage electric vehicles." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23E8491D'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23FFF7EF'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .card { display: flex; flex-direction: column; gap: 12px; padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--ink); transition: transform 0.15s, box-shadow 0.15s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,27,31,0.08); }
+    .card .num { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; color: var(--glaze); }
+    .card h3 { font-family: var(--font-display); font-size: 26px; margin: 0; letter-spacing: -0.02em; }
+    .card p { margin: 0; color: var(--ink-soft); font-size: 16px; flex: 1; }
+    .card .go { font-weight: 600; color: var(--glaze); }
+    @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -23,182 +33,35 @@
         </svg>
         <span class="brand-name">Donut</span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#trading">AI Trading</a>
-        <a href="#consulting">AI Courses</a>
-        <a href="#vehicles">Vehicles</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Get in touch</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO -->
     <section class="hero" id="top">
       <div class="wrap hero-inner">
         <p class="eyebrow">Donut</p>
-        <h1>AI, built<br />for the real world.</h1>
-        <p class="lede">Automated trading that's engineered, not gambled. Practical AI courses that get local businesses using the tools. And, coming soon, vintage electric vehicles.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#trading">See what we do</a>
-          <a class="btn btn-ghost" href="#contact">Start a conversation</a>
-        </div>
-      </div>
-      <div class="hero-mark" aria-hidden="true">
-        <svg viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="26"/>
-          <circle cx="100" cy="100" r="18" fill="currentColor"/>
-        </svg>
-      </div>
-    </section>
+        <h1>Three ventures,<br />one standard.</h1>
+        <p class="lede">Automated AI trading, practical AI courses for local business, and vintage electric vehicles. Choose where you're headed.</p>
 
-    <!-- TRADING -->
-    <section class="division division-trading" id="trading">
-      <div class="wrap">
-        <div class="division-grid">
-          <div class="division-copy">
-            <p class="eyebrow">01 — AI Trading</p>
-            <h2>Donut AI Trading</h2>
-            <p class="sub">Automated trading strategies, built in-house and explained in plain English.</p>
-            <div class="body">
-              <p>We build and run AI-driven trading systems that follow rules, not hunches. Each strategy is backtested, risk-managed, and monitored around the clock — the machine does the work, and we can always explain exactly why it made a move.</p>
-              <p>No black boxes, no hype. Just disciplined automation with clear risk limits, so a bad day is a bump in the road, never a wreck.</p>
-            </div>
-            <ul class="points">
-              <li>Always-on automated execution</li>
-              <li>Backtested, rules-based strategies</li>
-              <li>Risk-managed — no all-in bets</li>
-            </ul>
-          </div>
-          <div class="division-visual" aria-hidden="true">
-            <svg viewBox="0 0 240 240">
-              <path d="M30 190 L210 190" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/>
-              <path d="M30 190 L30 30" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/>
-              <path d="M50 160 L95 140 L130 155 L175 90 L210 60" fill="none" stroke="var(--glaze)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="50" cy="160" r="8" fill="var(--ink)"/>
-              <circle cx="95" cy="140" r="8" fill="var(--ink)"/>
-              <circle cx="130" cy="155" r="8" fill="var(--ink)"/>
-              <circle cx="175" cy="90" r="8" fill="var(--ink)"/>
-              <circle cx="210" cy="60" r="8" fill="var(--sprinkle)"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONSULTING -->
-    <section class="division division-consulting" id="consulting">
-      <div class="wrap">
-        <div class="division-grid reverse">
-          <div class="division-copy">
-            <p class="eyebrow">02 — AI Courses</p>
-            <h2>AI Courses for Local Business</h2>
-            <p class="sub">Practical training that gets your team actually using AI — not just hearing about it.</p>
-            <div class="body">
-              <p>We sell hands-on AI courses built for the businesses around us: the shop, the agency, the office that wants to save hours a week but doesn't know where to start.</p>
-              <p>No theory dumps. Each course walks your team through real tools on your real work — writing with AI, automating repetitive tasks, and spotting where AI actually pays for itself.</p>
-            </div>
-            <ul class="points">
-              <li>Hands-on, no-code-first lessons</li>
-              <li>Built for small &amp; local teams</li>
-              <li>Your tools, your workflows</li>
-            </ul>
-          </div>
-          <div class="division-visual" aria-hidden="true">
-            <svg viewBox="0 0 240 240">
-              <rect x="40" y="40" width="160" height="160" rx="14" fill="var(--card)" stroke="var(--line)" stroke-width="3"/>
-              <circle cx="120" cy="120" r="30" fill="var(--glaze)"/>
-              <path d="M110 108 L138 120 L110 132 Z" fill="var(--bg)"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VEHICLES -->
-    <section class="division division-vehicles" id="vehicles">
-      <div class="wrap">
-        <div class="division-grid">
-          <div class="division-copy">
-            <p class="eyebrow">03 — Vehicles</p>
-            <h2>Donut Vehicles</h2>
-            <p class="sub">Coming soon — vintage electric vehicles.</p>
-            <div class="body">
-              <p>We're preparing to convert beloved classic cars to modern electric drivetrains — the original character, kept; the leaks, fumes, and starter anxiety, gone.</p>
-            </div>
-            <span class="badge">Coming soon</span>
-          </div>
-          <div class="division-visual" aria-hidden="true">
-            <svg viewBox="0 0 240 180">
-              <path d="M40 128 L50 96 L78 96 L92 78 Q96 70 106 70 L128 70 Q138 70 142 78 L156 96 L184 96 L194 128 Z" fill="var(--glaze)"/>
-              <path d="M40 128 L194 128 L200 132 L200 138 L34 138 Z" fill="var(--ink)" opacity="0.9"/>
-              <circle cx="82" cy="140" r="14" fill="var(--ink)" opacity="0.9"/>
-              <circle cx="158" cy="140" r="14" fill="var(--ink)" opacity="0.9"/>
-              <circle cx="82" cy="140" r="5" fill="var(--bg)"/>
-              <circle cx="158" cy="140" r="5" fill="var(--bg)"/>
-              <path d="M110 92 L104 60 M132 92 L138 60" stroke="var(--bolt)" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="wrap">
-        <p class="eyebrow">Why Donut</p>
-        <h2>One standard, three directions.</h2>
-        <div class="about-grid">
-          <p class="about-lede">We keep it simple: build what we can explain, hold it to one standard, and stand behind it.</p>
-          <div class="about-body">
-            <p>Whether it's a trading system, a course for a local business, or a car we're bringing back to life, the rule is the same: do the real work, keep it honest, and never sell something we wouldn't use ourselves.</p>
-            <p>No shortcuts. No hype. Just work worth doing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="contact-grid">
-          <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2>Let's talk.</h2>
-            <p class="sub">Tell us what you need — trading, AI courses for your team, or a question about the vehicles.</p>
-            <div class="contact-lines">
-              <a href="mailto:tycewhiteley@icloud.com">tycewhiteley@icloud.com</a>
-              <a href="tel:+18066627528">(806) 662-7528</a>
-            </div>
-          </div>
-          <form class="contact-form" action="#" method="post" netlify>
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              I'm interested in
-              <select name="topic">
-                <option>AI Trading</option>
-                <option>AI Courses</option>
-                <option>Donut Vehicles</option>
-                <option>Something else</option>
-              </select>
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">Send message</button>
-          </form>
+        <div class="cards">
+          <a class="card" href="https://tycewhiteley-spec.github.io/donut-trading/">
+            <span class="num">01</span>
+            <h3>AI Trading</h3>
+            <p>Automated trading systems, engineered — backtested, risk-managed, and explained in plain English.</p>
+            <span class="go">Visit →</span>
+          </a>
+          <a class="card" href="https://tycewhiteley-spec.github.io/donut-courses/">
+            <span class="num">02</span>
+            <h3>AI Courses</h3>
+            <p>Hands-on AI training for local businesses. Real tools on your real work, no theory dumps.</p>
+            <span class="go">Visit →</span>
+          </a>
+          <a class="card" href="https://tycewhiteley-spec.github.io/donut-vehicles/">
+            <span class="num">03</span>
+            <h3>Vehicles</h3>
+            <p>Vintage electric vehicles — classic cars converted to modern electric. Coming soon.</p>
+            <span class="go">Visit →</span>
+          </a>
         </div>
       </div>
     </section>
