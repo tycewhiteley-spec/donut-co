@@ -1,13 +1,13 @@
 :root {
-  --bg: #FFF7EF;
-  --ink: #1B1B1F;
-  --ink-soft: #4A4A52;
-  --glaze: #E8491D;
-  --glaze-deep: #C43A14;
-  --sprinkle: #F2B33D;
-  --bolt: #F7D14A;
-  --card: #FFFFFF;
-  --line: #EADFD2;
+  --bg: #131722;
+  --ink: #d1d4dc;
+  --ink-soft: #787b86;
+  --glaze: #2962ff;
+  --glaze-deep: #1e53e5;
+  --sprinkle: #f0b90b;
+  --bolt: #f7d14a;
+  --card: #1e222d;
+  --line: #2a2e39;
   --radius: 18px;
   --wrap: 1120px;
   --font-display: "Fraunces", "Georgia", "Times New Roman", serif;
@@ -39,7 +39,7 @@ body {
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255, 247, 239, 0.85);
+  background: rgba(19, 23, 34, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -48,14 +48,14 @@ body {
   height: 68px;
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-.logo { width: 26px; height: 26px; color: var(--glaze); }
+.logo { width: 30px; height: 30px; }
 .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 24px; letter-spacing: -0.02em; }
 
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a { text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: 15px; }
 .nav a:hover { color: var(--ink); }
 .nav .nav-cta {
-  background: var(--ink); color: #fff; padding: 9px 18px; border-radius: 999px;
+  background: var(--glaze); color: #fff; padding: 9px 18px; border-radius: 999px;
 }
 .nav .nav-cta:hover { background: var(--glaze-deep); }
 
@@ -83,8 +83,8 @@ body {
 }
 .btn-primary { background: var(--glaze); color: #fff; }
 .btn-primary:hover { background: var(--glaze-deep); }
-.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
-.btn-ghost:hover { background: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn-ghost:hover { background: var(--glaze); border-color: var(--glaze); color: #fff; }
 
 .hero-mark { position: absolute; right: -40px; top: 50%; transform: translateY(-50%); width: 380px; height: 380px; color: var(--glaze); opacity: 0.14; z-index: 1; }
 .hero-mark svg { width: 100%; height: 100%; }
@@ -108,24 +108,24 @@ body {
 .points li { position: relative; padding-left: 28px; color: var(--ink); font-weight: 500; }
 .points li::before {
   content: ""; position: absolute; left: 0; top: 8px; width: 12px; height: 12px;
-  border-radius: 50%; background: var(--glaze); box-shadow: 0 0 0 3px rgba(232, 73, 29, 0.15);
+  border-radius: 50%; background: var(--glaze); box-shadow: 0 0 0 3px rgba(41, 98, 255, 0.18);
 }
 
 .badge {
   display: inline-block; margin-top: 8px; padding: 6px 16px;
-  background: rgba(232, 73, 29, 0.12); color: var(--glaze-deep);
-  border: 1px solid rgba(232, 73, 29, 0.35); border-radius: 999px;
+  background: rgba(41, 98, 255, 0.14); color: var(--glaze);
+  border: 1px solid rgba(41, 98, 255, 0.4); border-radius: 999px;
   font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
 }
 
 .division-visual svg { width: 100%; max-height: 320px; }
 .division-trading .division-visual { color: var(--glaze); }
 .division-consulting { background: var(--card); }
-.division-consulting .division-visual svg { --card: #FFFFFF; }
+.division-consulting .division-visual svg { --card: #1e222d; }
 .division-vehicles .division-visual { color: var(--glaze); }
 
 /* ---------- About ---------- */
-.about { padding: 96px 0; background: var(--ink); color: #fff; }
+.about { padding: 96px 0; background: var(--card); color: var(--ink); }
 .about .eyebrow { color: var(--sprinkle); }
 .about h2 {
   font-family: var(--font-display); font-weight: 700;
@@ -133,7 +133,7 @@ body {
 }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .about-lede { font-size: 24px; font-weight: 500; line-height: 1.4; margin: 0; }
-.about-body p { color: rgba(255,255,255,0.75); margin: 0 0 16px; }
+.about-body p { color: var(--ink-soft); margin: 0 0 16px; }
 
 /* ---------- Contact ---------- */
 .contact { padding: 96px 0; }
@@ -150,7 +150,7 @@ body {
 .contact-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 14px; }
 .contact-form input, .contact-form select, .contact-form textarea {
   font-family: inherit; font-size: 16px; padding: 12px 14px;
-  border: 1.5px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink);
+  border: 1.5px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink);
 }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
   outline: none; border-color: var(--glaze);
@@ -170,7 +170,7 @@ body {
   .nav.open {
     display: flex; position: absolute; top: 68px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 28px 20px;
+    background: var(--card); border-bottom: 1px solid var(--line); padding: 12px 28px 20px;
   }
   .nav.open a { padding: 12px 0; font-size: 18px; }
   .nav.open .nav-cta { text-align: center; margin-top: 8px; }
